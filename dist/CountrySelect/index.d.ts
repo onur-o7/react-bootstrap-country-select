@@ -1,0 +1,31 @@
+import React, { ReactNode, ChangeEvent } from 'react';
+import ICountry from './ICountry';
+import './style.scss';
+export interface CountrySelectProps {
+    value: string | ICountry;
+    onChange: (countryIdOrCountry: string | ICountry | null) => void;
+    onTextChange?: (text: string, changeEvent: ChangeEvent) => void;
+    countries?: ICountry[];
+    exclusions?: string[];
+    additions?: ICountry[];
+    valueAs?: 'id' | 'object';
+    flags?: boolean;
+    flush?: boolean;
+    disabled?: boolean;
+    placeholder?: ReactNode;
+    noMatchesText?: ReactNode;
+    size?: 'sm' | 'lg';
+    sort?: (c1: ICountry, c2: ICountry) => number;
+    matchNameFromStart?: boolean;
+    matchAbbreviations?: boolean;
+    countryLabelFormatter?: (country: ICountry) => ReactNode;
+    throwInvalidValueError?: boolean;
+    listMaxHeight?: number;
+    closeOnSelect?: true;
+    formControlProps?: any;
+    overlayProps?: any;
+    classPrefix?: string;
+    className?: string;
+}
+declare const _default: React.MemoExoticComponent<({ value, onChange, onTextChange, countries, exclusions, additions, valueAs, flags, flush, disabled, placeholder, noMatchesText, size, sort, matchNameFromStart, matchAbbreviations, countryLabelFormatter, throwInvalidValueError, listMaxHeight, closeOnSelect, formControlProps, overlayProps, classPrefix, className, }: CountrySelectProps) => JSX.Element>;
+export default _default;
