@@ -2275,7 +2275,7 @@ var CountrySelect = function (_a) {
     }, [countries, exclusions, additions, sort]);
     React.useEffect(function () {
         if (inputGroupRef.current) {
-            console.log('width: ', inputGroupRef.current.offsetWidth);
+            //console.log('width: ', inputGroupRef.current.offsetWidth);
             setWidth(inputGroupRef.current.offsetWidth);
         }
     }, [inputGroupRef.current]);
@@ -2326,7 +2326,7 @@ var CountrySelect = function (_a) {
         React__default["default"].createElement(reactBootstrap.InputGroup, { ref: inputGroupRef, className: "".concat(classPrefix, "__input-group"), size: size },
             (!flush && flags) &&
                 React__default["default"].createElement(reactBootstrap.InputGroup.Text, { className: "".concat(classPrefix, "__input-group__flag") }, selectedCountry ? selectedCountry.flag : ''),
-            React__default["default"].createElement(reactBootstrap.FormControl, __assign({ ref: formControlRef, className: "".concat(classPrefix, "__form-control"), value: selectedCountry ? "".concat(flush && flags ? selectedCountry.flag + '   ' : '').concat(selectedCountry.name) : inputText, onKeyDown: handleKey, onChange: function (ev) { return inputChange(ev.target.value, ev); }, onFocus: handleFocus, onBlur: handleBlur, placeholder: placeholder, disabled: disabled, spellCheck: false, autoComplete: 'new-value' }, formControlProps))),
+            React__default["default"].createElement(reactBootstrap.FormControl, __assign({ ref: formControlRef, className: "".concat(classPrefix, "__form-control"), value: selectedCountry ? "".concat(flush && flags ? selectedCountry.flag + '   ' : '').concat(selectedCountry.name) : inputText, onKeyDown: handleKey, onChange: function (ev) { return inputChange(ev.target.value, ev); }, onFocus: handleFocus, onBlur: handleBlur, placeholder: placeholder, disabled: disabled, spellCheck: false, autoComplete: 'country' }, formControlProps))),
         React__default["default"].createElement(reactBootstrap.Overlay, __assign({ target: inputGroupRef.current, rootClose: true, placement: 'bottom-start', show: focused && (!selectedCountry || !closeOnSelect), onHide: function () { }, transition: true }, overlayProps), function (_a) {
             _a.placement; _a.arrowProps; _a.show; _a.popper; var props = __rest(_a, ["placement", "arrowProps", "show", "popper"]);
             return (React__default["default"].createElement("div", __assign({}, props, { style: __assign({ width: (width > 0) ? "".concat(width, "px") : 'calc(100% - 10px)' }, props.style) }),
